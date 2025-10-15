@@ -50,3 +50,64 @@
 --Carlos Mendez	I saw someone check into a hotel on August 13. The guy looked nervous.
 --Raul Gutierrez	I heard someone checked into a hotel with "Sunset" in the name.
 --Correction : These people are probably witnesses who saw a potential suspect that checked into a hotel with "Sunset" in the name on August 13.
+ -- Query 04:
+  --SELECT person.name, hotel_checkins.hotel_name, hotel_checkins.check_in_date FROM
+  --person
+  --JOIN hotel_checkins
+  --ON person.id = hotel_checkins.person_id
+  --WHERE hotel_checkins.hotel_name LIKE '%Sunset%' AND
+  --hotel_checkins.check_in_date LIKE '%0813'; 
+--The above query gives following results : 
+--Results
+--name	hotel_name	check_in_date
+--Jacob Campbell	Sunset Bay Hotel	19860813
+--George Davis	Sunset Harbor Hotel	19860813
+--Joseph Taylor	Sunset Palms Resort	19860813
+--Christopher Lee	Sunset Shore Hotel	19860813
+--Edward Baker	Sunset Marina Inn	19860813
+--James Wilson	Sunset Inn	19860813
+--Kenneth Green	Sunset Reef Inn	19860813
+--Jeffrey Nelson	Sunset Lagoon Resort	19860813
+--Robert Smith	Sunset Marina Hotel	19860813
+--Nicholas Roberts	Sunset Breeze Hotel	19860813
+--Stephen Cooper	Sunset Vista Hotel	19860813
+--Donald Cook	Sunset Crest Hotel	19860813
+--Charles Peterson	Sunset Palms Hotel	19860813
+--Philip Collins	Sunset Beach Inn	19860813
+--Gregory Stewart	Sunset Coast Inn	19860813
+--Dennis Bailey	Sunset Harbor Inn	19860813
+--Douglas Murphy	Sunset Isle Inn	19860813
+--Carl Cooper	Sunset Reef Hotel	19860813
+--Lawrence Powell	Sunset Lagoon Hotel	19860813
+--Sean Fisher	Sunset Grove Inn	19860813
+--Wayne Ross	Sunset Dunes Hotel	19860813
+--Ralph Coleman	Sunset Shores Inn	19860813
+--Randy Perry	Sunset Haven Hotel	19860813
+--David Clark	Sunset Beach Hotel	19860813
+--Paul Thompson	Sunset Bay Resort	19860813
+--Thomas Brown	Sunset Palm Resort	19860813
+--Kevin White	Sunset View Inn	19860813
+--Richard Moore	Sunset Coast Hotel	19860813
+--Daniel Martin	Sunset Sands Inn	19860813
+--Steven King	Sunset Beach Resort	19860813
+--Brian Hall	Sunset Ocean Hotel	19860813
+--Ronald Scott	Sunset Isle Resort	19860813
+--Anthony Hill	Sunset Wave Hotel	19860813
+--Jason Adams	Sunset Keys Hotel	19860813
+--Ryan Phillips	Sunset Point Inn	19860813
+--Gary Mitchell	Sunset Grove Resort	19860813
+--Eric Carter	Sunset Dunes Inn	19860813
+--Andrew Richardson	Sunset Shores Resort	19860813
+--Mark Morgan	Sunset Haven Inn	19860813
+--Sean Turner	Sunset Oasis Resort	19860813
+--Raymond Wood	Sunset Marina Resort	19860813
+--Joshua Reed	Sunset Bay Lodge	19860813
+--Peter Bell	Sunset View Resort	19860813
+--Henry Rivera	Sunset Wave Resort	19860813
+--Arthur Bryant	Sunset Keys Inn	19860813
+--Terry Butler	Sunset Point Resort	19860813
+--Bruce Barnes	Sunset Breeze Resort	19860813
+--Eugene Henderson	Sunset Vista Resort	19860813
+--John Anderson	Sunset Cove Inn	19860813
+--Roy Jenkins	Sunset Crest Resort	19860813
+
