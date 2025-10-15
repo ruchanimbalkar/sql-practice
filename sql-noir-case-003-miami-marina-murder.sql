@@ -22,4 +22,16 @@
 -- Results
 --id	date	location	description
 --43	19860814	Coral Bay Marina	The body of an unidentified man was found near the docks. Two people were seen nearby: one who lives on 300ish "Ocean Drive" and another whose first name ends with "ul" and his last name ends with "ez".
+-- Find suspects
+  -- Query 02:
+    -- SELECT * FROM person
+    --WHERE ADDRESS LIKE '3%% Ocean Drive%' OR
+    --name LIKE '%ul%ez'; 
+---The above query gives following results:
+--Results
+  --id	name	alias	occupation	address
+  --5	Michael Santos	Silent Mike	Bartender	33 Ocean Drive
+  --101	Carlos Mendez	Los Ojos	Fisherman	369 Ocean Drive
+  --102	Raul Gutierrez	The Cobra	Nightclub Owner	45 Sunset Ave
+  --105	Victor Martinez	Slick Vic	Bartender	33 Ocean Drive
 
