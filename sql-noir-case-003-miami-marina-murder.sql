@@ -15,3 +15,11 @@
   --hotel_checkins
   --surveillance_records
   --confessions
+-- Find description of the crime scene using the following query :
+--Query 01:
+-- SELECT * FROM crime_scene WHERE date=19860814 AND location LIKE 'Coral Bay Marina';
+--The above query gives following results:
+-- Results
+--id	date	location	description
+--43	19860814	Coral Bay Marina	The body of an unidentified man was found near the docks. Two people were seen nearby: one who lives on 300ish "Ocean Drive" and another whose first name ends with "ul" and his last name ends with "ez".
+
