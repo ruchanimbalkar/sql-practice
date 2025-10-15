@@ -8,3 +8,10 @@
   --Your job, detective, is to find the murderer and bring them to justice.
   --This case might require the use of JOINs, wildcard searches, and logical deduction.
   --Get to work, detective.
+-- Tables/Schema 
+  --crime_scene
+  --person
+  --interviews
+  --hotel_checkins
+  --surveillance_records
+  --confessions
