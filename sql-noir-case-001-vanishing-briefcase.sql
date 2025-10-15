@@ -2,3 +2,19 @@
   -- 1. The SQL queries you ran
   -- 2. Any notes or insights as SQL comments
   -- 3. Your final conclusion: who did it?
+--Link : https://www.sqlnoir.com/
+-- Background : Case #001: The Vanishing Briefcase
+--Set in the gritty 1980s, a valuable briefcase has disappeared from the Blue Note Lounge. 
+  --A witness reported that a man in a trench coat was seen fleeing the scene. 
+  --Investigate the crime scene, review the list of suspects, and examine interview transcripts to reveal the culprit.
+--Tables/Schema
+  --crime_scene
+  --suspects
+  --interviews
+--Queries:
+--Query 01:
+-- SELECT * FROM crime_scene WHERE location = 'Blue Note Lounge';
+-- The above query gives the following result :
+-- id	date	type	location	description
+-- 76	19851120	theft	Blue Note Lounge	A briefcase containing sensitive documents vanished. A witness reported a man in a trench coat with a scar on his left cheek fleeing the scene.
+
