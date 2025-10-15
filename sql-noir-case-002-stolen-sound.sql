@@ -36,4 +36,17 @@
 --35	Tony Ramirez	red	gold watch
 --44	Mickey Rivera	red	gold watch
 --97	Rico Delgado	red	gold watch
+--Query 04 :
+  -- SELECT suspects.name, interviews.transcript FROM interviews 
+  -- JOIN suspects
+  --ON interviews.suspect_id = suspects.id
+  -- WHERE suspects.bandana_color ='red' AND suspects.accessory = 'gold watch';
+-- The above query gives the following results :
+--Results
+--name	transcript
+--Tony Ramirez	I wasn't anywhere near West Hollywood Records that night.
+--Mickey Rivera	I was busy with my music career; I have nothing to do with this theft.
+--Rico Delgado	I couldn't help it. I snapped and took the record.
+--This means Rico Delgado is the thief.
+
 
