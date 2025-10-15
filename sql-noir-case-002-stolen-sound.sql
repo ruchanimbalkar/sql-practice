@@ -13,4 +13,19 @@
   --witnesses
   --suspects
   --interviews
+--Queries:
+  --Query 01 :
+--SELECT * FROM crime_scene WHERE type = 'theft' AND location = 'West Hollywood Records';
+-- The above query gives the following result :
+--Result
+--id	date	type	location	description
+--65	19830715	theft	West Hollywood Records	A prized vinyl record was stolen from the store during a busy evening.
+  --Query 02:
+--SELECT * FROM witnesses WHERE crime_scene_id = 65;
+-- The above query gives the following results :
+-- Results
+-- id	crime_scene_id	clue
+-- 28	65	I saw a man wearing a red bandana rushing out of the store.
+-- 75	65	The main thing I remember is that he had a distinctive gold watch on his wrist.
+-- Notes : This means the man was wearing a red bandana and a distinctive gold watch on his wrist.
 
