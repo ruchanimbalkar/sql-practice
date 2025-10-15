@@ -28,4 +28,12 @@
 -- 28	65	I saw a man wearing a red bandana rushing out of the store.
 -- 75	65	The main thing I remember is that he had a distinctive gold watch on his wrist.
 -- Notes : This means the man was wearing a red bandana and a distinctive gold watch on his wrist.
+  --Query 03:
+-- SELECT * FROM suspects WHERE bandana_color = 'red' AND accessory = 'gold watch';
+-- The above query gives the following results :
+--Results
+--id	name	bandana_color	accessory
+--35	Tony Ramirez	red	gold watch
+--44	Mickey Rivera	red	gold watch
+--97	Rico Delgado	red	gold watch
 
