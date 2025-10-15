@@ -111,3 +111,52 @@
 --John Anderson	Sunset Cove Inn	19860813
 --Roy Jenkins	Sunset Crest Resort	19860813
 
+--Next step is to look at the survelliance to see which suspect was acting nervous:
+  --Query 05:
+    --WITH previous_query AS (SELECT person.id, person.name, hotel_checkins.hotel_name, hotel_checkins.check_in_date FROM
+    --person
+    --JOIN hotel_checkins
+    --ON person.id = hotel_checkins.person_id
+    --WHERE hotel_checkins.hotel_name LIKE '%Sunset%' AND
+    --hotel_checkins.check_in_date LIKE '%0813'
+    --)
+    --SELECT surveillance_records.suspicious_activity, previous_query.name
+    --FROM previous_query
+    --JOIN surveillance_records
+    --ON previous_query.id = surveillance_records.person_id 
+    --WHERE surveillance_records.suspicious_activity NOT NULL; 
+--The above query gives following results:
+    -- Results
+    -- suspicious_activity	name
+    -- Requested newspaper delivery	Jacob Campbell
+    -- Asked for directions to beach	Joseph Taylor
+    -- Spotted entering late at night	James Wilson
+    -- Asked about checkout time	Kenneth Green
+    -- Used hotel vending machine	Jeffrey Nelson
+    -- Seen arguing with an unknown person	Robert Smith
+    -- Used hotel restaurant	Nicholas Roberts
+    -- Asked about room service menu	Stephen Cooper
+    -- Used ice machine	Gregory Stewart
+    -- Requested extra soap	Dennis Bailey
+    -- Used hotel phone	Douglas Murphy
+    -- Asked about check-in time	Carl Cooper
+    -- Used hotel gym	Ralph Coleman
+    -- Requested extra pillows	Randy Perry
+    -- Requested wake-up call	David Clark
+    -- Had breakfast at hotel restaurant	Paul Thompson
+    -- Left suddenly at 3 AM	Thomas Brown
+    -- Used valet parking	Kevin White
+    -- Used the business center	Daniel Martin
+    -- Requested city map	Steven King
+    -- Used concierge service	Brian Hall
+    -- Borrowed pool towels	Anthony Hill
+    -- Used the elevator	Andrew Richardson
+    -- Requested fresh towels	Mark Morgan
+    -- Used hotel parking	Sean Turner
+    -- Asked about laundromat service	Raymond Wood
+    -- Used lobby restroom	Arthur Bryant
+    -- Requested room cleaning	Terry Butler
+    -- Used hotel elevator	Bruce Barnes
+    -- Asked about breakfast hours	Eugene Henderson
+-- Nobody in the above list seems to acting exactly nervous, so next, I will turn to confessions:
+
