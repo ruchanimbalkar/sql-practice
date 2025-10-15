@@ -22,7 +22,7 @@
 -- Results
 --id	date	location	description
 --43	19860814	Coral Bay Marina	The body of an unidentified man was found near the docks. Two people were seen nearby: one who lives on 300ish "Ocean Drive" and another whose first name ends with "ul" and his last name ends with "ez".
--- Find suspects
+-- Find suspects/witnesses???
   -- Query 02:
     -- SELECT * FROM person
     --WHERE ADDRESS LIKE '3%% Ocean Drive%' OR
@@ -34,4 +34,19 @@
   --101	Carlos Mendez	Los Ojos	Fisherman	369 Ocean Drive
   --102	Raul Gutierrez	The Cobra	Nightclub Owner	45 Sunset Ave
   --105	Victor Martinez	Slick Vic	Bartender	33 Ocean Drive
-
+-- The two people that closely match the description from crime_scene are:
+  -- 1. 101 Carlos Mendez who resides at 369 Ocean Drive
+  -- 2. 102 Raul Martinez whose first name ends with ul and last name ends with ez
+ -- Query 03:
+  --SELECT person.name, interviews.transcript FROM
+  --person
+  --JOIN interviews
+  --ON person.id = interviews.person_id
+  --WHERE person.address = '369 Ocean Drive' OR
+  --person.name = 'Raul Gutierrez'; 
+---The above query gives following results: 
+--Results
+--name	transcript
+--Carlos Mendez	I saw someone check into a hotel on August 13. The guy looked nervous.
+--Raul Gutierrez	I heard someone checked into a hotel with "Sunset" in the name.
+--Correction : These people are probably witnesses who saw a potential suspect that checked into a hotel with "Sunset" in the name on August 13.
