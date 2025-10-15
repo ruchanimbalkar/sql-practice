@@ -25,5 +25,14 @@
   --3	Frankie Lombardi	trench coat	left cheek
   --183	Vincent Malone	trench coat	left cheek
   --237	Christopher Black	trench coat	right cheek
+--Query 03:
+-- SELECT * FROM suspects JOIN interviews ON suspects.id = interviews.suspect_id WHERE suspects.attire ='trench coat';
+-- The above query gives the following results :
+-- Results
+  -- id	name	attire	scar	suspect_id	transcript
+  -- 3	Frankie Lombardi	trench coat	left cheek	3	NULL
+  -- 183	Vincent Malone	trench coat	left cheek	183	I wasn’t going to steal it, but I did.
+--Looking at the results, we can deduce the following: 
+-- Vincent Malone is the thief that stole the briefcase from the Blue Note Lounge on November 20 1985
 
 
