@@ -17,4 +17,13 @@
 -- The above query gives the following result :
 -- id	date	type	location	description
 -- 76	19851120	theft	Blue Note Lounge	A briefcase containing sensitive documents vanished. A witness reported a man in a trench coat with a scar on his left cheek fleeing the scene.
+--Query 02:
+-- SELECT * FROM suspects WHERE attire = 'trench coat';
+-- The above query gives the following results :
+  --Results
+  --id	name	attire	scar
+  --3	Frankie Lombardi	trench coat	left cheek
+  --183	Vincent Malone	trench coat	left cheek
+  --237	Christopher Black	trench coat	right cheek
+
 
