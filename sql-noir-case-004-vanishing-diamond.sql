@@ -70,4 +70,28 @@
       -- id	guest_id	note	id	name	occupation	invitation_code
       -- 48	105	navy suit, white tie	105	Mike Manning	Wealth Reallocation Expert	VIP-R
 -- Mike Manning seems like a suspect.
+-- Query 06
+    -- SELECT * 
+    -- FROM marina_rentals
+    -- WHERE dock_number = 3 AND boat_name LIKE 'Marina%';
+--  The above query gives following results :
+    -- Results
+    -- id	dock_number	renter_guest_id	rental_date	boat_name
+    -- 29	3	78	19870520	Marina Belle II
+    -- 69	3	89	19871028	Marina Seeker
+-- The first row matches with the date of the theft (19870520) in the crime_scene table.
+    -- 29	3	78	19870520	Marina Belle II
+-- The renter_guest_id is 78.
+-- Query 07
+  -- SELECT guest.name, final_interviews.confession
+  -- FROM guest 
+  -- JOIN final_interviews
+  -- ON guest.id = final_interviews.guest_id
+  -- WHERE guest.name = 'Mike Manning';
+--  The above query gives following results :
+  -- Results
+  -- name	confession
+  -- Mike Manning	I was the one who took the crystal. I guess I need a lawyer now?
+-- This means Mike Manning probably stole the crystal and hid it in Marina Belle II.
+-- Mike Manning is the confirmed culprit/thief.
 
