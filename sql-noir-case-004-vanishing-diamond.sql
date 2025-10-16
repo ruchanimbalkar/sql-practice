@@ -58,4 +58,16 @@
     -- id	guest_id	clue
     -- 16	116	I saw someone holding an invitation ending with "-R". He was wearing a navy suit and a white tie.
     -- 50	129	I overheard someone say, "Meet me at the marina, dock 3.
+-- Query 05
+    -- SELECT * 
+    -- FROM attire_registry
+    -- JOIN guest
+    -- ON attire_registry.guest_id = guest.id
+    -- WHERE attire_registry.note LIKE 'navy suit%white tie' AND
+    -- guest.invitation_code LIKE '%R';
+--  The above query gives following results :
+      -- Results
+      -- id	guest_id	note	id	name	occupation	invitation_code
+      -- 48	105	navy suit, white tie	105	Mike Manning	Wealth Reallocation Expert	VIP-R
+-- Mike Manning seems like a suspect.
 
