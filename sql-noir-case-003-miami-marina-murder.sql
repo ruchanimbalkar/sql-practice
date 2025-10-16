@@ -159,4 +159,77 @@
     -- Used hotel elevator	Bruce Barnes
     -- Asked about breakfast hours	Eugene Henderson
 -- Nobody in the above list seems to acting exactly nervous, so next, I will turn to confessions:
+  --Query 06:
+    --WITH previous_results AS (SELECT confessions.person_id,confessions.confession,person.name FROM confessions 
+    --JOIN person
+    --ON confessions.person_id = person.id)
+    --SELECT previous_results.name, previous_results.confession, surveillance_records.suspicious_activity
+    --FROM surveillance_records
+    --JOIN previous_results
+    --ON previous_results.person_id = surveillance_records.person_id
+    --WHERE surveillance_records.suspicious_activity NOT NULL;
+--The above query gives following results :
+    -- Results
+    -- name	confession	suspicious_activity
+    -- James Wilson	I don't know anything about this.	Spotted entering late at night
+    -- Robert Smith	I was just walking my dog that night.	Seen arguing with an unknown person
+    -- Thomas Brown	Alright! I did it. I was paid to make sure he never left the marina alive.	Left suddenly at 3 AM
+    -- David Clark	Who are you to question me? I'm an innocent man.	Requested wake-up call
+    -- Paul Thompson	I have no idea what you're talking about.	Had breakfast at hotel restaurant
+    -- Kevin White	Alright! Fine! I was the one who robbed that bank last month.	Used valet parking
+    -- Joseph Taylor	This is ridiculous, I'm innocent!	Asked for directions to beach
+    -- Daniel Martin	Alright! I admit it - I've been running an illegal gambling ring.	Used the business center
+    -- Steven King	I was nowhere near there that night.	Requested city map
+    -- Brian Hall	I don't know what you're investigating.	Used concierge service
+    -- Anthony Hill	Alright! I confess to the art gallery heist!	Borrowed pool towels
+    -- Kenneth Green	I'm just a simple businessman.	Asked about checkout time
+    -- Jeffrey Nelson	Alright! I've been running a smuggling operation.	Used hotel vending machine
+    -- Jacob Campbell	This is harassment!	Requested newspaper delivery
+    -- Nicholas Roberts	I was at the movies that evening.	Used hotel restaurant
+    -- Stephen Cooper	Alright! I've been forging documents.	Asked about room service menu
+    -- Andrew Richardson	I'm an honest citizen.	Used the elevator
+    -- Mark Morgan	Alright! I confess to the insurance fraud.	Requested fresh towels
+    -- Sean Turner	This is all a mistake.	Used hotel parking
+    -- Raymond Wood	I was out of town that week.	Asked about laundromat service
+    -- Gregory Stewart	You're barking up the wrong tree.	Used ice machine
+    -- Dennis Bailey	I'm a law-abiding citizen.	Requested extra soap
+    -- Douglas Murphy	Alright! I've been selling stolen electronics.	Used hotel phone
+    -- Carl Cooper	Check my records, I'm clean.	Asked about check-in time
+    -- Arthur Bryant	Alright! I confess to the warehouse break-in.	Used lobby restroom
+    -- Terry Butler	You're making a big mistake.	Requested room cleaning
+    -- Bruce Barnes	I was at work all day.	Used hotel elevator
+    -- Eugene Henderson	Alright! I confess to hacking the system.	Asked about breakfast hours
+    -- Ralph Coleman	I'm being framed!	Used hotel gym
+    -- Randy Perry	Alright! I've been selling fake IDs.	Requested extra pillows
+    -- Bobby Hughes	Who told you about me?	Used hotel restaurant
+    -- Victor Gray	I was asleep at the time.	Asked about local attractions
+    -- Walter Long	This is all circumstantial.	Used vending machine
+    -- Jesse Brooks	I'm innocent of all charges.	Requested taxi service
+    -- Arthur Hayes	Alright! I confess to the corporate espionage.	Used hotel lobby
+    -- Lawrence Gordon	I have witnesses for my whereabouts.	Asked about pool hours
+    -- Jerry Graham	Alright! I've been selling stolen artwork.	Used hotel VIP parking space
+    -- Ray Wallace	You're on a wild goose chase.	Requested room key replacement
+    -- Albert Cole	I was with my girlfriend that night.	Used hotel gym
+    -- Willie West	This is absurd!	Asked about checkout process
+    -- Ralph Fox	I'm a respected member of this community.	Used hotel parking
+    -- Bobby Grant	Alright! I confess to the identity theft ring.	Requested wake-up call
+    -- Fred Harrison	This is pure speculation.	Used hotel restaurant
+    -- Wayne Ellis	I don't know what you mean.	Asked about room service
+    -- Earl Stone	Alright! I confess to the tax evasion scheme.	Used business center
+    -- Stanley Black	This is all hearsay.	Requested extra towels
+    -- Leon Carr	I have nothing to hide.	Used hotel pool
+    -- Norman Holmes	Alright! I confess to the insider trading.	Asked about food service
+    -- Vernon Rice	I was visiting my mother.	Used valet service
+    -- Lewis Shaw	Alright! I've been selling counterfeit goods.	Requested room cleaning
+    -- Claude Fleming	You're following a dead end.	Used hotel gym
+    -- Cecil Daniels	I have a solid alibi.	Asked about breakfast
+    -- Floyd Duncan	Alright! I've been running an illegal import business.	Used hotel restaurant
+    -- Lloyd Weber	You're mistaken about me.	Requested extra pillows
+    -- Sam Knight	I'm not involved in any way.	Used concierge service
+    -- Carlos Mendez	This is just a misunderstanding.	Asked for room service menu
+    -- Luis Sanchez	I have proof of my innocence.	Used the spa facilities
+    -- Diego Ramirez	You're looking at the wrong person.	Requested late checkout
 
+--Looking at the third row, Thomas Brown seems to be the one to do it as he confesses it
+--Thomas Brown	Alright! I did it. I was paid to make sure he never left the marina alive.	Left suddenly at 3 AM
+--Thomas Brown is the culprit/murderer.
