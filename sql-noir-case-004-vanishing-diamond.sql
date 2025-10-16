@@ -12,3 +12,50 @@
   --attire_registry
   --marina_rentals
   --final_interviews
+-- Query 01:
+  --SELECT * FROM crime_scene WHERE location LIKE '%Fontainebleau Hotel';
+-- The above query gives following results :
+-- id	date	    location	           description
+-- 48	19870520	Fontainebleau Hotel	The Heart of Atlantis necklace disappeared. Many guests were questioned but only two of them gave valuable clues.
+                                    --One of them is a really famous actor. The other one is a woman who works as a consultant for a big company and her first name ends with "an".
+-- This means we have two witnesses from the guest schema a famous actor and a woman who works as a consultant for a big company and her first name ends with 'an'.
+  -- Query 02:
+  -- SELECT * 
+  -- FROM guest 
+  -- WHERE occupation = 'consultant' OR
+  -- name LIKE '%an %';
+-- The above query gives following results :
+    -- Results
+    -- id	name	occupation	invitation_code
+    -- 14	Ethan Taylor	Financial Analyst	VIP-B
+    -- 22	Sebastian Lewis	Music Producer	VIP-R
+    -- 40	Julian Wood	Sports Team Owner	VIP-R
+    -- 60	Roman Fisher	Nightclub Owner	VIP-G
+    -- 116	Vivian Nair	Consultant	VIP-R
+-- The last row matches the description of the second witness.
+--In the next query I will look for the famous actor
+  --Query 03
+  -- SELECT * 
+  -- FROM guest
+  -- WHERE occupation ='Actor';
+-- The above query gives following results:
+    -- Results
+    -- id	name	occupation	invitation_code
+    -- 43	Ruby Baker	Actor	VIP-R
+    -- 129	Clint Eastwood	Actor	VIP-G
+    -- 164	River Bowers	Actor	VIP-B
+    -- 189	Sage Dillon	Actor	VIP-G
+    -- 192	Phoenix Pitts	Actor	VIP-G
+-- Clint Eastwood is a famous actor. He is the first witness from the guest list and Vivian Nair is the second witness.
+--Next I will look at their transcripts in the witness_statements table.
+-- Query 04
+    -- SELECT * 
+    -- FROM witness_statements
+    -- WHERE guest_id = 129 OR
+    -- guest_id = 116;
+-- The above query gives following results :
+    -- Results
+    -- id	guest_id	clue
+    -- 16	116	I saw someone holding an invitation ending with "-R". He was wearing a navy suit and a white tie.
+    -- 50	129	I overheard someone say, "Meet me at the marina, dock 3.
+
