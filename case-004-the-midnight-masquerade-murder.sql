@@ -48,3 +48,16 @@ OR hotel_checkin_id = 104
 -- 88	    88	             Subject used hotel notary services for business documents.
 -- 98	    98	             Subject requested directions to nearest conference center location.
 -- 104	   104	           Subject used hotel dry cleaning service.
+-- Notes/Comments: Not satisfied with the above result, I decided to look up the person schema to see 
+-- the names of the persons with ids 134, 67, and 156 obtained in query #4
+-- Query #6
+SELECT * 
+FROM person
+WHERE id = 134
+OR id = 67
+OR id = 156
+-- The above query gives me following results :
+-- id	name	            occupation	    address
+-- 67	Earl Patterson	Police Officer	 797 Redwood Road
+-- 134	Amy Evans	    Carpenter	       223 Redwood Road
+-- 156	Kathy Fisher	Pharmacist	     667 Sycamorewood Drive
