@@ -161,3 +161,12 @@ OR person_id = 58;
 -- Victor DiMarco	I didn’t kill Leo per se. I was just a middleman.
 -- Notes : This means that Victor DiMarco was indirectly involved in the death of Leonard Pierce.
 -- I decided to find more about Victor
+-- According to the following query Victor Di Marco
+            -- Query #15
+            SELECT *
+            FROM  person
+            WHERE name ='Victor DiMarco';
+            -- The above query gave me the following result
+            -- id	name	occupation	address
+            -- 58	Victor DiMarco	Jobless	707 Cedarwood Avenue
+-- is jobless and lives on 707 Cedarwood Avenue
