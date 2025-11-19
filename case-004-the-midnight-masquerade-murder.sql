@@ -63,9 +63,23 @@ OR id = 156
 -- 156	Kathy Fisher	Pharmacist	     667 Sycamorewood Drive
 -- Comments: Next I thought of finding more details about the victim so I wrote the following query:
 -- Query #7
--- SELECT * 
--- FROM person
--- WHERE name = 'Leonard Pierce';
+SELECT * 
+FROM person
+WHERE name = 'Leonard Pierce';
 -- The above query gives me following result :
 -- id	name	        occupation	       address
 -- 4	Leonard Pierce	Business Magnate	101 Elite Ave
+-- Comments: Next I thought of looking at the final_interviews schema so I wrote the following query:
+-- Query #8
+SELECT person.name, final_interviews.confession
+FROM final_interviews
+JOIN person
+ON final_interviews.person_id = person.id
+WHERE person_id = 67
+OR person_id = 134
+OR person_id = 156;
+-- The above query gives me following result :
+--   name	            confession
+-- Earl Patterson	    I have proof of my whereabouts. Im not someone who would kill.
+-- Amy Evans	        Check my internet service logs. Im not the murderer youre looking for.
+-- Kathy Fisher	      My bus pass shows I was traveling. I would never take someones life.
