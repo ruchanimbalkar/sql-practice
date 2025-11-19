@@ -58,9 +58,9 @@ OR id = 67
 OR id = 156
 -- The above query gives me following results :
 -- id	name	            occupation	    address
--- 67	Earl Patterson	Police Officer	 797 Redwood Road
--- 134	Amy Evans	    Carpenter	       223 Redwood Road
--- 156	Kathy Fisher	Pharmacist	     667 Sycamorewood Drive
+-- 67	  Earl Patterson	Police Officer	 797 Redwood Road
+-- 134	Amy Evans	      Carpenter	       223 Redwood Road
+-- 156	Kathy Fisher	  Pharmacist	     667 Sycamorewood Drive
 -- Comments: Next I thought of finding more details about the victim so I wrote the following query:
 -- Query #7
 SELECT * 
@@ -94,3 +94,4 @@ WHERE note like '%kill%';
 -- name	            note
 -- Antonio Rossi	Why did you kill him, bro? You should have left the carpenter do it himself!
 -- Victor DiMarco	Why did you kill him, bro? You should have left the carpenter do it himself!
+-- Note : Then I remembered Amy Evans is a carpenter who was at the Regency Hotel.
