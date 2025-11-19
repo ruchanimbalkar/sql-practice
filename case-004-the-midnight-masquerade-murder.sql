@@ -61,3 +61,11 @@ OR id = 156
 -- 67	Earl Patterson	Police Officer	 797 Redwood Road
 -- 134	Amy Evans	    Carpenter	       223 Redwood Road
 -- 156	Kathy Fisher	Pharmacist	     667 Sycamorewood Drive
+-- Comments: Next I thought of finding more details about the victim so I wrote the following query:
+-- Query #7
+-- SELECT * 
+-- FROM person
+-- WHERE name = 'Leonard Pierce';
+-- The above query gives me following result :
+-- id	name	        occupation	       address
+-- 4	Leonard Pierce	Business Magnate	101 Elite Ave
