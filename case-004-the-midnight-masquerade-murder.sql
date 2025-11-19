@@ -136,3 +136,13 @@ OR id = 58;
 -- id	name	occupation	address
 -- 11	Antonio Rossi	Auto Importer	999 Dark Alley
 -- 58	Victor DiMarco	Jobless	707 Cedarwood Avenue
+-- Comments/Notes : I decided to look up the final interviews of the witnesses
+-- Query #13
+SELECT *
+FROM final_interviews
+WHERE person_id = 37 
+OR person_id = 42;
+-- The above query gives following result :
+-- id	person_id	confession
+-- 37	37	This is just not possible. Im not someone who would kill.
+-- 42	42	I have proof of where I was. I didnt kill anybody.
