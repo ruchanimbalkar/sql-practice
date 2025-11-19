@@ -83,3 +83,14 @@ OR person_id = 156;
 -- Earl Patterson	    I have proof of my whereabouts. Im not someone who would kill.
 -- Amy Evans	        Check my internet service logs. Im not the murderer youre looking for.
 -- Kathy Fisher	      My bus pass shows I was traveling. I would never take someones life.
+-- Comments : After being dissappointed with the above result/confessions, I decided to look at the phone records
+-- Query #9
+SELECT person.name, phone_records.note
+FROM phone_records
+JOIN person
+ON person.id = caller_id OR person.id= recipient_id
+WHERE note like '%kill%';
+-- The above query gave me the following result:
+-- name	            note
+-- Antonio Rossi	Why did you kill him, bro? You should have left the carpenter do it himself!
+-- Victor DiMarco	Why did you kill him, bro? You should have left the carpenter do it himself!
