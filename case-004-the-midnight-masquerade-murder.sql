@@ -23,3 +23,16 @@ SELECT *
 FROM hotel_checkins
 WHERE hotel_name ='The Grand Regency'
 AND room_number = 707;
+-- The above query gives me multiple rows (> 5). If, I added the date of the murder to the query:
+-- Query #4
+SELECT * 
+FROM hotel_checkins
+WHERE hotel_name ='The Grand Regency'
+AND room_number = 707
+AND check_in_date = 19871031;
+-- I get following results (only 3 rows) :
+-- id	person_id	hotel_name	check_in_date	room_number
+-- 88	134	The Grand Regency	19871031	    707
+-- 98	67	The Grand Regency	19871031	    707
+-- 104	156	The Grand Regency	19871031	  707
+
