@@ -73,7 +73,7 @@ WHERE id = 263;
 SELECT * FROM keycard_access_logs
 WHERE employee_id = 263;
 -- The above query gave me no result. 
--- So I wondered if it was a fake employee created to do the espionage because I wanted to see if his keycard starte with QX and had two odd numbers.
+-- Notes/Comments : So I wondered if it was a fake employee created to do the espionage because I wanted to see if his keycard starte with QX and had two odd numbers.
 -- I decided to look up key cards for:
 -- -- Margie Weber	178
 -- Ann Peterson	56
@@ -102,7 +102,7 @@ OR employee_id = 99;
 -- 130	178	QX-070	19890421	16:30
 -- 140	56	QX-288	19890421	09:30
 -- 160	56	QX-006	19890421	13:20
--- I noticed that employee 23, 99 and 56 had keycard_codes with odd numbers QX-219, QX-035, and QX-241:
+-- Notes/Comments : I noticed that employee 23, 99 and 56 had keycard_codes with odd numbers QX-219, QX-035, and QX-241:
 -- So I wondered if :
     -- Ann Peterson	56
     -- Paul Adams	23
@@ -110,5 +110,17 @@ OR employee_id = 99;
 -- were one of the culprits.
 -- I entered their names in the submit tab but those were wrong answers.
 -- Then I entered Norman Owens name in the submit tab but that was also wrong so I decided to backtrack.
+-- I looked at Norman Owens email ("unlock 18 quietly by 9. He’ll use his own credentials to access it shortly after L leaves") 
+-- and wrote the following query:
+-- Query #9
+SELECT *
+FROM facility_access_logs
+WHERE facility_name LIKE '%18'
+AND access_time LIKE '09%';
+-- The above query gave me the following result :
+-- id	employee_id	facility_name	access_date	access_time
+-- 81	297	Facility 18	19890421	09:01
+-- Notes/Comments :
+
 
 
