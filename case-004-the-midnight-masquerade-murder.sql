@@ -95,3 +95,7 @@ WHERE note like '%kill%';
 -- Antonio Rossi	Why did you kill him, bro? You should have left the carpenter do it himself!
 -- Victor DiMarco	Why did you kill him, bro? You should have left the carpenter do it himself!
 -- Note : Then I remembered Amy Evans is a carpenter who was at the Regency Hotel.
+-- Comments : I tried entering the above names 
+-- (Antonio Rossi, Victor DiMarco, Amy Evans, Earl Patterson and Kathy Fisher	)
+-- in the submit tab but they were all wrong answers so I realized my answers were and was on the wrong trail.
+-- Looking back at the results of first query,  I decide to start again with the witness statements.
