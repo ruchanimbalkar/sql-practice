@@ -99,3 +99,15 @@ WHERE note like '%kill%';
 -- (Antonio Rossi, Victor DiMarco, Amy Evans, Earl Patterson and Kathy Fisher	)
 -- in the submit tab but they were all wrong answers so I realized my answers were and was on the wrong trail.
 -- Looking back at the results of first query,  I decide to start again with the witness statements.
+-- I backtracked and I wrote the following query :
+-- Query #10
+SELECT person.name, witness_statements.clue
+FROM witness_statements
+JOIN person
+ON person.id = witness_statements.witness_id
+WHERE crime_scene_id = 75;
+-- The above query gave me the following result:
+-- name	             clue
+-- Steven Nelson	  I overheard a booking at The Grand Regency.
+-- Sharon Phillips	I noticed someone at the front desk discussing Room 707 for a reservation made yesterday.
+-- Notes/comments : I then started to think about phone_records and reservations made for room 707 at The Grand Regency.
