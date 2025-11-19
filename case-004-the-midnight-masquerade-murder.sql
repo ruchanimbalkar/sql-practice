@@ -16,3 +16,10 @@ SELECT * FROM witness_statements WHERE crime_scene_id = 75;
 -- id	crime_scene_id	witness_id	clue
 -- 83	75	37	I overheard a booking at The Grand Regency.
 -- 89	75	42	I noticed someone at the front desk discussing Room 707 for a reservation made yesterday.
+-- Notes/Comments : This implies that I should next check the hotel_checkins table for the hotel
+  -- "The Grand Regency" and room number 707.
+-- Query #3
+SELECT * 
+FROM hotel_checkins
+WHERE hotel_name ='The Grand Regency'
+AND room_number = 707;
