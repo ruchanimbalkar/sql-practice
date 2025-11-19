@@ -146,3 +146,18 @@ OR person_id = 42;
 -- id	person_id	confession
 -- 37	37	This is just not possible. Im not someone who would kill.
 -- 42	42	I have proof of where I was. I didnt kill anybody.
+-- Notes Then I realized I never looked up the final interviews of Antonio Rossi or Victor DiMarco
+-- So, I wrote the following query
+--Query #14
+SELECT person.name, final_interviews.confession
+FROM final_interviews
+JOIN person
+ON person.id = final_interviews.person_id
+WHERE person_id = 11
+OR person_id = 58;
+-- The above query gives following result :
+-- name	confession
+-- Antonio Rossi	Im a peaceful person. I wouldnt kill anyone ever.
+-- Victor DiMarco	I didn’t kill Leo per se. I was just a middleman.
+-- Notes : This means that Victor DiMarco was indirectly involved in the death of Leonard Pierce.
+-- I decided to find more about Victor
