@@ -181,3 +181,15 @@ OR person_id = 58;
           -- name	          id	person_id	order_date	item	      amount
           -- Victor DiMarco	62	58	        19871030	Screwdriver	1
 -- Victor DiMarco bought a screwdriver on 10/30/1987
+-- I then looked at phone records of Victor DiMarco
+--Query #17
+SELECT *
+FROM  phone_records
+WHERE caller_id = 58
+OR recipient_id = 58;
+-- The above query gave me the following result :
+-- id	caller_id	recipient_id	call_date	call_time	note
+-- 117	11	58	19871030	23:30	Why did you kill him, bro? You should have left the carpenter do it himself!
+-- 163	133	58	19871030	22:15	I will do it. Only if you give me that nice Lambo of yours.
+-- Notes/ Comments : This means the real murderer has caller_id/ person_id = 133 and owns a lamborgini
+--
