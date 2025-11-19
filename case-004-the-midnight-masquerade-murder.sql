@@ -35,4 +35,16 @@ AND check_in_date = 19871031;
 -- 88	134	The Grand Regency	19871031	    707
 -- 98	67	The Grand Regency	19871031	    707
 -- 104	156	The Grand Regency	19871031	  707
-
+-- Notes : To find the survelliance records for the checkins, I wrote the following query 
+--  using the checkin ids 88, 98, or 104
+-- Query #5
+SELECT * 
+FROM surveillance_records
+WHERE hotel_checkin_id = 88
+OR hotel_checkin_id = 98
+OR hotel_checkin_id = 104
+-- The above query gives me following results :
+-- id	hotel_checkin_id	note
+-- 88	    88	            Subject used hotel notary services for business documents.
+-- 98	    98	            Subject requested directions to nearest conference center location.
+-- 104	  104	            Subject used hotel dry cleaning service.
