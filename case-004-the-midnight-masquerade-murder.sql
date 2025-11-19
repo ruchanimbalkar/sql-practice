@@ -170,3 +170,14 @@ OR person_id = 58;
             -- id	name	occupation	address
             -- 58	Victor DiMarco	Jobless	707 Cedarwood Avenue
 -- is jobless and lives on 707 Cedarwood Avenue
+-- According to the following query :
+            --Query #16
+            SELECT person.name, catering_orders.*
+            FROM  person
+            RIGHT JOIN catering_orders
+            ON catering_orders.person_id = person.id
+            WHERE catering_orders.person_id = 58;
+            -- The above query gave me the following result
+          -- name	          id	person_id	order_date	item	      amount
+          -- Victor DiMarco	62	58	        19871030	Screwdriver	1
+-- Victor DiMarco bought a screwdriver on 10/30/1987
