@@ -191,5 +191,42 @@ OR recipient_id = 58;
 -- id	caller_id	recipient_id	call_date	call_time	note
 -- 117	11	58	19871030	23:30	Why did you kill him, bro? You should have left the carpenter do it himself!
 -- 163	133	58	19871030	22:15	I will do it. Only if you give me that nice Lambo of yours.
--- Notes/ Comments : This means the real murderer has caller_id/ person_id = 133 and owns a lamborgini
---
+-- Notes/ Comments : This means the real murderer has caller_id 133 and owns a lamborgini and is carpenter by occupation
+-- To do that I wrote the following query : 
+-- Query #18
+SELECT *
+FROM person
+LEFT JOIN vehicle_registry
+ON vehicle_registry.person_id= person.id
+WHERE vehicle_registry.car_make = 'Lamborghini'
+AND person.occupation = 'Carpenter'; 
+-- The above query gave me the following result :
+-- id	name	occupation	address	id	person_id	plate_number	car_make	car_model
+-- 97	Marco Santos	Carpenter	112 Forestwood Way	41	97	EFG901	Lamborghini	Countach
+--Notes/ Comments : This means Marco Santos is the murderer. He is a Carpenter and owns a Lambo.
+-- Next to confirm, I will look at his confession in the final interviews table
+-- Query #19
+SELECT *
+FROM final_interviews
+WHERE person_id = 97;
+-- The above query gave me the follwing result
+-- id	person_id	confession
+-- 97	97	I ordered the hit. It was me. You caught me.
+-- Notes/ Comments: I was expecting him to say "What took you so long?" but he did not and it did take me long but it was fun solving this mystery.
+-- After submitting "Marco Santos" in the submit tab :
+-- I got the following result! Yaay ! Case Solved!
+-----------------------------------------------------------------------------------------------------------
+-- Outstanding detective work! The evidence conclusively shows that Marco Santos is the true murderer.
+
+-- Explanation
+-- You began by retrieving the crime scene record and examining witness statements,
+--   which mentioned a hotel booking at The Grand Regency (room 707 on 19871030).
+--   Filtering hotel check-ins by these clues returned multiple entries. 
+--   A JOIN with surveillance records narrowed the field to one key entry that noted a subject yelling on a 
+--   phone ("I'm gonna kill him!"). Reviewing phone records, you found a call to Victor DiMarco containing 
+--   the phrase "Why did you kill him, bro? You should have let the carpenter do his job!" Identifying the 
+--   recipient of that call and interviewing him revealed that he was not the killer but hinted that the true murderer
+--   is a carpenter driving a Lamborghini. Joining the vehicle registry with the person table (filtering for
+--   occupation "Carpenter" and car model "Lamborghini") yielded one candidate.
+--   A final interview with that candidate resulted in a confession. Thus, the true murderer is Marco Santos.
+-----------------------------------------------------------------------------------------------------------
