@@ -111,3 +111,28 @@ WHERE crime_scene_id = 75;
 -- Steven Nelson	  I overheard a booking at The Grand Regency.
 -- Sharon Phillips	I noticed someone at the front desk discussing Room 707 for a reservation made yesterday.
 -- Notes/comments : I then started to think about phone_records and reservations made for room 707 at The Grand Regency.
+-- Assuming the call to regency was made on 10/31/1987, I wrote the following query :
+-- Query #11
+WITH results AS (SELECT hotel_checkins.person_id, check_in_date
+FROM hotel_checkins 
+JOIN final_interviews
+ON hotel_checkins.person_id = final_interviews.person_id
+WHERE hotel_checkins.room_number = 707)
+SELECT *
+FROM results
+JOIN phone_records
+ON results.person_id = phone_records.caller_id
+WHERE call_date=19871030;
+-- The above query gives following result :
+-- person_id	check_in_date	id	caller_id	recipient_id	call_date	call_time	note
+-- 11	        19871030	    117	  11	    58	          19871030	23:30	    Why did you kill him, bro? You should have left the carpenter do it himself!
+-- Notes/Comments : Wondering if I was back in the circle, I decided to look up the caller_id and recipient_id in the person table
+-- Query #12
+SELECT *
+FROM person
+WHERE id = 11
+OR id = 58;
+-- I got the following result :
+-- id	name	occupation	address
+-- 11	Antonio Rossi	Auto Importer	999 Dark Alley
+-- 58	Victor DiMarco	Jobless	707 Cedarwood Avenue
