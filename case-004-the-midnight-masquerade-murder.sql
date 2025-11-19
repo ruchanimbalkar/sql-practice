@@ -8,3 +8,11 @@ SELECT * FROM crime_scene where date=19871031 AND location='Miami Mansion, Cocon
 -- 75	19871031	Miami Mansion, Coconut Grove	During a masked ball, 
 --   a body was found in the garden. Witnesses mentioned a hotel booking 
 --   and suspicious phone activity.
+-- Notes : This means that I need to find witness statements at crime scene id 75.
+--  So, I wrote the next query as follows:
+-- Query #2
+SELECT * FROM witness_statements WHERE crime_scene_id = 75;
+-- The above query gives the following result :
+-- id	crime_scene_id	witness_id	clue
+-- 83	75	37	I overheard a booking at The Grand Regency.
+-- 89	75	42	I noticed someone at the front desk discussing Room 707 for a reservation made yesterday.
