@@ -45,6 +45,6 @@ OR hotel_checkin_id = 98
 OR hotel_checkin_id = 104
 -- The above query gives me following results :
 -- id	hotel_checkin_id	note
--- 88	    88	            Subject used hotel notary services for business documents.
--- 98	    98	            Subject requested directions to nearest conference center location.
--- 104	  104	            Subject used hotel dry cleaning service.
+-- 88	    88	           Subject used hotel notary services for business documents.
+-- 98	    98	           Subject requested directions to nearest conference center location.
+-- 104	 104	           Subject used hotel dry cleaning service.
